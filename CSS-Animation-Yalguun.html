@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head> <title> text</title>
+<style>
+body{
+margin-top: 150px;
+padding:0px;
+background:#262626;
+text-align:center;
+}
+*{
+box-sizing:border-box;}
+span{
+margin:0px;
+padding:0px;
+transform:translate(-50%,50%);
+color:#262626;
+font-size:500%;
+letter-spacing:100%;
+animation:glow 1.4s linear infinite;
+}
+
+
+@keyframes glow{
+0%{
+color:#262626;
+text-shadow:none;
+}
+90%{
+color:#262626;
+text-shadow:none;
+}
+100%{
+color:#FFFF00;
+text-shadow:0 0 7px #fff900,0 0 50px #ff6c00;
+}
+}
+span:nth-child(1) {
+animation-delay:.2s;
+}
+span:nth-child(2) {
+animation-delay:.4s;
+}
+span:nth-child(3) {
+animation-delay:.6s;
+}
+span:nth-child(4) {
+animation-delay:.8s;
+}
+span:nth-child(5) {
+animation-delay:1s;
+}
+span:nth-child(6) {
+animation-delay:1.2s;
+}
+span:nth-child(7) {
+animation-delay:1.4s;
+}
+.box{
+width:100%;
+height:50%;
+border:3px solid transparent;
+border-image:linear-gradient(40deg,#EE82EE,#4B0082,blue,green,orange,red);
+border-image-slice:1;
+box-shadow:0 15px 25px rgba(0,0,0,.2);
+}
+</style>
+<script>
+function done() {
+  var spans = document.getElementsByTagName("span");
+  spans[4].innerHTML = "u";
+  spans[5].innerHTML = "u";
+  spans[6].innerHTML = "n";
+  for (var i = 0; i < spans.length; i++) {
+    spans[i].style.animation = "none";
+    spans[i].style.color = "#ffff00"
+  } 
+} 
+</script>
+</head>
+<body onload="setTimeout(done, 10000);">
+<div class="box">
+<span>Y</span>
+<span>a</span>
+<span>l</span>
+<span>g</span>
+<span>u</span>
+<span>u</span>
+<span>n</span>
+</div>
+</body>
+</html>
